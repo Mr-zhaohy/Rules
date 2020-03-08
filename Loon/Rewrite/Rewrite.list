@@ -521,10 +521,16 @@
 ^https?:\/\/api\.izuiyou\.com\/ad\/ - reject
 # > 字节跳动
 ^https?:\/\/.+\.pstatp\.com\/img\/ad - reject
-#^https?:\/\/.+\.(amemv|musical|snssdk|tiktokv)\.(com|ly)\/(api|motor)\/ad\/ - reject
+^https?:\/\/.+\.(amemv|musical|snssdk|tiktokv)\.(com|ly)\/(api|motor)\/ad\/ - reject
 ^https?:\/\/dsp\.toutiao\.com\/api\/xunfei\/ads\/ - reject
 ^https?:\/\/.+\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/ - reject
 ^https?:\/\/.+/img\/ad\.union\.api\/ - reject
+# > Tiktok
+(.*video_id=\w{32})(.*watermark=)(.*) $1 302
+(?<=(carrier|account|sys)_region=)CN JP 307
+#(?<=version_code=)\d{1,}.\d{1}\.\d{1} 8.4.0 307
+# Resso (By JO2EY)
+(?<=(carrier|account|sys|sim)_region=)cn in 307
 # > 中国银行
 ^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\? - reject
 # > 中信银行
