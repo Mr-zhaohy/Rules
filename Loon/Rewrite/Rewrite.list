@@ -521,7 +521,7 @@
 ^https?:\/\/api\.izuiyou\.com\/ad\/ - reject
 # > 字节跳动
 ^https?:\/\/.+\.pstatp\.com\/img\/ad - reject
-^https?:\/\/.+\.(amemv|musical|snssdk|tiktokv)\.(com|ly)\/(api|motor)\/ad\/ - reject
+#^https?:\/\/.+\.(amemv|musical|snssdk|tiktokv)\.(com|ly)\/(api|motor)\/ad\/ - reject
 ^https?:\/\/dsp\.toutiao\.com\/api\/xunfei\/ads\/ - reject
 ^https?:\/\/.+\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/ - reject
 ^https?:\/\/.+/img\/ad\.union\.api\/ - reject
